@@ -1,0 +1,138 @@
+:root {
+	--color-bg: #1c2518;
+	--color-secondary: #b5f895;
+	--color-text: #fff;
+	--color-white: #fff;
+	--color-bg-bento: #31392d;
+	--color-bento-shadow: #1c2518;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"); */
+
+body {
+	width: 100%;
+	font-size: 1.6rem;
+	font-family: "Poppins", sans-serif;
+	height: 100svh;
+	background-color: var(--color-bg);
+	color: var(--color-secondary);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* CIRCLE STAT */
+.year-percentage,
+.life-calc {
+	width: 100%;
+	border-radius: 1rem;
+	padding: 2rem;
+	display: flex;
+	flex: 1 1 50%;
+	background-color: var(--color-bg-bento);
+	box-shadow: 10px 14px 38px -15px var(--color-bento-shadow);
+	-webkit-box-shadow: 10px 14px 38px -15px var(--color-bento-shadow);
+	-moz-box-shadow: 10px 14px 38px -15px var(--color-bento-shadow);
+}
+
+.section__life-calc,
+.section__year-percentage {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.year-percentage__circle {
+	display: flex;
+	justify-content: center;
+}
+
+svg {
+	width: 11rem;
+	height: 11rem;
+}
+
+.bg {
+	fill: none;
+	stroke-width: 10px;
+	stroke: #1a2c34;
+}
+
+.meter {
+	fill: none;
+	stroke-width: 10px;
+	/* stroke-linecap: round; */
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+	stroke: var(--color-secondary);
+	stroke-dasharray: 0 360; /* La longitud inicial es 0 */
+	animation: progress-bar 0.75s ease-out forwards; /* Usamos 'forwards' para mantener el estado final de la animación */
+}
+
+.circle__text {
+	font-size: 1rem;
+	font-weight: 400;
+	fill: var(--color-secondary);
+}
+
+/* @keyframes progress-bar {
+	from {
+		stroke-dashoffset: 360;
+	}
+	to {
+		stroke-dashoffset: calc(
+			360 - (360 * var(--percentage) / 100)
+		); /* Calcula el offset en base al porcentaje
+	}
+} 
+*/
+
+.year-percentage__description {
+	display: flex;
+	justify-content: center;
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+/* REFLEXION */
+.section__reflexion {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.reflexion__description {
+	font-size: 1rem;
+}
+
+/* 2 CALCULATE */
+.life-calc {
+	display: block;
+}
+
+.life-calc__group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+select {
+	background-color: transparent;
+	border: none;
+	font-size: 1.3rem;
+}
+
+label {
+	font-size: 1.3rem;
+}
