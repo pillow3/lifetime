@@ -25,7 +25,7 @@
     <script src="assets/js/life-calc.js" defer></script>
 
     <link>
-    <title>Yearin%</title>
+    <title>LifeTime</title>
 </head>
 
 <body>
@@ -43,6 +43,8 @@
         <div class="year-percentage">
             <!-- YEAR PERCENTAGE -->
             <section class="section__year-percentage">
+                <h1 class="year-percentage__title"><span class="year year-span"></span> Progress Overview</h1>
+
                 <div class="year-percentage__circle">
                     <svg viewBox="0 0 100 100">
                         <circle class="bg" cx="50" cy="50" r="40"></circle>
@@ -51,6 +53,7 @@
                             dominant-baseline="middle" fill="white"></text>
                     </svg>
                 </div>
+
                 <div class="year-percentage__description">
                     <p>Day <span class="day"></span> of <span class="year"></span></p>
                 </div>
@@ -62,6 +65,7 @@
         <!-- 2 CALCULATE -->
         <div class="life-calc">
             <section class="section__life-calc">
+                <h1 class="life-calc__title">Life Percentage Tracker</h1>
 
                 <div class="life-calc__group">
 
@@ -184,7 +188,11 @@
             </section>
         </div>
 
+        <footer class="footer__container">
+            <p class="footer__description">Powered by <span class="footer_name">Raul Cano</span> 💚</p>
+        </footer>
     </div>
+
 
 
 </body>

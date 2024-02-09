@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 	const dayElement = document.querySelector(".day");
-	const yearElement = document.querySelector(".year");
+	const yearElements = document.querySelectorAll(".year");
 	const meter = document.getElementById("meter");
 	const textElement = document.getElementById("circle__text");
 
@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	let totalDaysOfYear = Math.floor((end - start) / oneDay);
 	console.log("Total de días en el año actual: " + totalDaysOfYear);
 	dayElement.textContent = dayOfYear;
-	yearElement.textContent = currentYear;
+	yearElements.forEach((element) => {
+		element.textContent = currentYear;
+	});
 
 	function setPercentage(percentage) {
 		const circumference = Math.PI * parseFloat(meter.getAttribute("r")) * 2;
